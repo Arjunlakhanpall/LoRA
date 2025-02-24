@@ -12,16 +12,6 @@ Low-Rank Adaptation (LoRA) is a technique for fine-tuning large language models 
 ## **How LoRA Works**
 LoRA replaces standard weight updates in transformer layers by decomposing weight matrices into low-rank matrices. Instead of modifying the original weights, LoRA introduces additional trainable matrices **A** and **B** with much lower ranks.
 
-### **Mathematical Representation**
-Given a weight matrix **W** (dimensions: d × k), LoRA approximates its update as:
-
-\[ \Delta W = A \times B \]
-
-Where:
-- **A** is a (d × r) matrix.
-- **B** is an (r × k) matrix.
-- **r** (rank) is a hyperparameter that controls the adaptation capacity.
-- **W_final** = **W** + **ΔW**
 
 ## **Implementation Steps**
 ### **1. Install Dependencies**
